@@ -9,3 +9,9 @@
 |`mv` [options] file1 file2|Move files and dirs from one location to another, and optionally rename them|
 |`rm` [options] file|Delete file|
 |`ln` [options] source target|Create a link to a file or dir|
+
+```bash
+# 활용
+nginx -t
+sudo chmod 777 -R filename
+```
