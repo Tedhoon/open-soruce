@@ -59,3 +59,38 @@ $ ln hard_source hard_link
 # 심볼릭 링크 사용법 : ln -s 원본파일 대상파일(대상디렉토리)
 $ ln -s shared-file link-name
 ```
+
+
+
+## Permissions
+
+```bash
+$ ls -l
+# 권한 확인
+> -rw-r--r-- 1 82106 197609 2529 4월   2 19:35 linux.md
+```
+- 첫번 째 나오는 인자부터 user, group, others 의 permission
+
+### octal value 
+|read|write|execute|
+|---|---|---|
+|r|w|x|
+|4|2|1|
+
+|User|Group|Others|
+|---|---|---|
+|rwx|r-x|r-x|
+|421|4-1|4-1|
+|7|5|5|
+
+```bash
+# 활용
+-> chmod 755 filename
+```
+
+```bash
+format : chmod options mode file/dir
+
+-> chmod -R options 755 filename
+# -R옵션을 주면 포함, 하위 요소들에게 모두 권한을 준다.
+```
