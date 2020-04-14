@@ -124,4 +124,94 @@ $ kill -9 [PID]
 
 
 
+---
 
+## Using Filters with Pipes
+```bash
+$ command1 | command2
+```
+
+
+### uniq command
+```bash
+$ cat > uni.txt
+1 2 3 4
+3 4 6 7 
+1 1 1 1 
+1 1 1 1 
+...
+
+$ uniq uni.txt uni_new.txt
+
+$ cat uni_new.txt
+
+# 요놈은 3,4 번째 줄에 중복을 없애주는데 말그래도 unique하게 1줄만남게함
+
+
+ex)
+
+$ ls /bin/ sort | uniq | less
+>> 알아서 정리되서 뜸
+```
+
+
+### head/tail command
+```bash
+$ head -n 3 test.txt
+-> 처음 세줄만 보여줌
+# -n 옵션은 n 줄이라는 뜻
+
+$ tail -n 3 test.txt
+-> 뒤부터 3줄
+```
+
+### cut commnad
+`cut options file_list`
+
+#### options
+- -c character_list : 리스트에 정의된 것 추출
+
+- -f field_list : 이것도 같은데 file_list
+
+- -d delimeter : 
+
+```bash
+$ cut -c 1-4 test.txt
+# 요놈 해보니까 2열까지만 추출됨
+```
+
+### sort command
+#### options
+- -k : sort based on a `key field`
+- -n : perform sorting based on the `numeric evaluation` of a string
+- -r : sort in `reverse` order
+
+
+## wc -l
+- -l 옵션을 사용하면 line별로 세준다.
+- text기준.. 등 많음
+
+
+## grep command
+```bash
+# "of"가 포함된 내용 찾기
+$ grep "of" temp.txt
+```
+```bash
+# 응용) of 가 들어있는 라인 갯수 찾기
+$ grep "of" movie_list_a.txt | wc -l
+```
+
+## tip
+```bash
+echo 넣고싶은 문자 >> filename
+# 문자 넣어줌
+```
+```bash
+sort movie_list_a.txt >> movie_list_a_sorted.txt
+# 오름차순 정렬하고 새로운 이름으로 생성
+```
+```bash
+wc -l filename
+# line별 갯수 세줌
+```
