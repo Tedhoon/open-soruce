@@ -94,3 +94,34 @@ format : chmod options mode file/dir
 -> chmod -R options 755 filename
 # -R옵션을 주면 포함, 하위 요소들에게 모두 권한을 준다.
 ```
+
+
+
+## ps 명령어
+
+`meaning of ps output`
+- PID : Process ID
+- TIME : The amount of CPU time used so far(MM:SS)
+- CMD : The name of commands
+
+`ps options`
+- -e : options instructs ps to include all running process
+- -f : options causes ps to generate a full listing
+- -l : options generetes a long listing
+
+```bash
+$ ps -ef 
+# 걍 저는 거의 이거씀
+```
+
+## kill 명령어
+
+- 그냥 kill하면 프로그램이 시그널을 알아 듣지 못함!
+- 따라서 시그널 옵션 -9(sure kill)을 같이 보내줘야한다!
+```bash
+$ kill -9 [PID]
+```
+
+
+
+
