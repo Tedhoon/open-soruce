@@ -215,3 +215,20 @@ sort movie_list_a.txt >> movie_list_a_sorted.txt
 wc -l filename
 # line별 갯수 세줌
 ```
+
+---
+
+# gcc로 c 컴파일하기
+
+- method1
+```bash
+$ gcc hello.c
+```
+- method2
+.c -> .o로 바꾸어서 컴파일하기
+```bash
+$ gcc -c hello.c 
+$ ls *.o    # hello.o 가 생성됨
+$ gcc -o hello hello.o  # hello가 실행가능한 파일로
+$ ./hello
+```
