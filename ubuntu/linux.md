@@ -1,4 +1,4 @@
-### File and Directory commanads(1)
+# File and Directory commanads(1)
 
 |commands|description|
 |---|---|
@@ -18,7 +18,7 @@ sudo chmod 777 -R filename
 
 ---
 
-## File and Directory commanads(2)
+# File and Directory commanads(2)
 |commands|description|
 |---|---|
 |cp|복사|
@@ -46,7 +46,7 @@ $ mv file1 dir1/
 
 ```
 
-### Symbolic Link, Hard Link의 차이
+## Symbolic Link, Hard Link의 차이
 - *Symbolic Link* : 단순히 원본파일을 가리키도록 링크만 시켜둔 것으로 MS의 윈도우시스템에서 흔히 사용하는 '바로가기' 같은 것이며, 원본파일을 가리키고만 있으므로 원본파일의 크기와는 무관한다. 그리고 심볼릭링크에서는 원본파일이 삭제되어 존재하지 않을 경우에 링크파일은 깜박거리면서 링크파일의 원본파일이 없다는 것을 알려준다.
 
 
@@ -62,7 +62,7 @@ $ ln -s shared-file link-name
 
 
 
-## Permissions
+# Permissions
 
 ```bash
 $ ls -l
@@ -71,7 +71,7 @@ $ ls -l
 ```
 - 첫번 째 나오는 인자부터 user, group, others 의 permission
 
-### octal value 
+## octal value 
 |read|write|execute|
 |---|---|---|
 |r|w|x|
@@ -132,7 +132,7 @@ $ command1 | command2
 ```
 
 
-### uniq command
+## uniq command
 ```bash
 $ cat > uni.txt
 1 2 3 4
@@ -155,7 +155,7 @@ $ ls /bin/ sort | uniq | less
 ```
 
 
-### head/tail command
+## head/tail command
 ```bash
 $ head -n 3 test.txt
 -> 처음 세줄만 보여줌
@@ -165,10 +165,10 @@ $ tail -n 3 test.txt
 -> 뒤부터 3줄
 ```
 
-### cut commnad
+## cut commnad
 `cut options file_list`
 
-#### options
+### options
 - -c character_list : 리스트에 정의된 것 추출
 
 - -f field_list : 이것도 같은데 file_list
@@ -180,8 +180,8 @@ $ cut -c 1-4 test.txt
 # 요놈 해보니까 2열까지만 추출됨
 ```
 
-### sort command
-#### options
+## sort command
+### options
 - -k : sort based on a `key field`
 - -n : perform sorting based on the `numeric evaluation` of a string
 - -r : sort in `reverse` order
