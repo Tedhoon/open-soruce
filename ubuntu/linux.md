@@ -223,12 +223,21 @@ wc -l filename
 - method1
 ```bash
 $ gcc hello.c
+# 이렇게 하면 hello.out이 나온다!
+$ ./hello.out
 ```
 - method2
 .c -> .o로 바꾸어서 컴파일하기
 ```bash
 $ gcc -c hello.c 
-$ ls *.o    # hello.o 가 생성됨
-$ gcc -o hello hello.o  # hello가 실행가능한 파일로
+$ ls *.o    
+# hello.o 가 생성된걸 확인, .o파일은 실행파일이다. hello.out or hello.o를 바로 실행시켜도 컴파일 가능
+$ gcc -o hello hello.o  
+# hello라는 실행가능한 파일을 또 만드는 것
 $ ./hello
 ```
+```bash
+$ gcc -c hello.c
+$ gcc hello.c -o anything
+# anything이라는 이름의 실행파일이 생김
+$ ./anything
